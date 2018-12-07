@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
+    <ui:composition>
+        <b:navBar brand="Modulo de Asistencias" brandHref="#" inverse="true" fixed="top" fluid="true">
+            <b:navbarLinks pull="right">
+                <b:navLink icon="globe" href="#" value="Acerca de..." onclick="#" />
+                <b:navLink icon="user" href="#" value="#{menuPrincipalController.usuario.idempleado}-#{menuPrincipalController.usuario.empleado}" />
+            </b:navbarLinks>            
+        </b:navBar>
+        <br />
+        <br />
+        <br />
+        <b:container fluid="true">
+            <b:row>
+                <h:form>
+                    <p:menubar>
+                        <p:submenu label="Asistencias" icon="fa fa-check-circle">
+                            <p:menuitem value="Captura"         icon="fa fa-check" url="contentCapturaAsistencia.xhtml?faces-redirect=true" />
+                            <p:menuitem value="Autorizacion"    icon="fa fa-check" url="contentCapturaAsistencia.xhtml?faces-redirect=true" />
+                            <p:menuitem value="Aprobacion"      icon="fa fa-check" url="contentCapturaAsistencia.xhtml?faces-redirect=true" />
+                            <p:menuitem value="Consulta"        icon="fa fa-search" url="contentCapturaAsistencia.xhtml?faces-redirect=true" />
+                            
+                            <p:menuitem value="Incidencias Adelantadas" icon="fa fa-share" url="contentCapturaAsistencia.xhtml?faces-redirect=true" />
+                        </p:submenu>
+                        <p:submenu label="Movimientos" icon="fa fa-random">
+                            <p:menuitem value="Personal a Tienda"       icon="fa fa-exchange" url="contentCapturaAsistencia.xhtml?faces-redirect=true" />
+                            <p:menuitem value="Personal a Departamento" icon="fa fa-exchange" url="contentCapturaAsistencia.xhtml?faces-redirect=true" />
+                            <p:menuitem value="Personal entre Tiendas"  icon="fa fa-exchange" url="contentCapturaAsistencia.xhtml?faces-redirect=true" />
+                            
+                        </p:submenu>
+                        <p:submenu label="Personal" icon="fa fa-users">
+                            <p:menuitem value="Puestos Logisticos" icon="fa fa-bars" url="contentEdicionTiendas.xhtml?faces-redirect=true" />
+                        </p:submenu>
+                        <p:submenu label="Reportes" icon="fa fa-bar-chart">
+                            <p:menuitem value="Asistencias Capturadas"      icon="fa fa-bookmark" url="contentEdicionRegiones.xhtml?faces-redirect=true" />
+                            <p:menuitem value="Asistencias Autorizadas"     icon="fa fa-bookmark" url="contentEdicionZonas.xhtml?faces-redirect=true" />
+                            <p:menuitem value="Asistencias Aprobadas"       icon="fa fa-bookmark" url="contentEdicionZonas.xhtml?faces-redirect=true" />
+                            <p:menuitem value="Porcentaje de Captura"       icon="fa fa-bookmark" url="contentEdicionZonas.xhtml?faces-redirect=true" />
+                        </p:submenu>
+                        <p:submenu label="Configuracion" icon="fa fa-wrench">
+                            <p:menuitem value="Dias Festivos" icon="fa fa-calendar-o" url="contentListaUsuarios.xhtml?faces-redirect=true" />
+                        </p:submenu>
+                    </p:menubar>
+                </h:form>
+            </b:row>
+        </b:container>
+    </ui:composition>
+</html>
